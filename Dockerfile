@@ -21,7 +21,7 @@ RUN apt update && apt -y install wget gnupg binutils && \
     apt update && \
     apt install -y nginx && \
     apt install --download-only --reinstall nginx lsb-base  libgcc-s1 libc6 libcrypt1 libpcre2-8-0 libssl3 zlib1g && \
-    apt install --download-only --reinstall libidn2-0 libnss-nis libnss-nisplus  debconf gcc-10-base && \
+    apt install --download-only --reinstall libidn2-0 libnss-nis libnss-nisplus  debconf gcc-12-base && \
     for f in /var/cache/apt/archives/*.deb; do dpkg-deb -xv $f /packages; done && \
     rm -rf /packages/usr/share/bash-completion  \
         /packages/usr/share/debconf \
