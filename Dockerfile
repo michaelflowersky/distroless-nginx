@@ -1,5 +1,5 @@
 # syntax=docker/dockerfile:1
-FROM debian:11 as builder
+FROM debian:12 as builder
 
 ENV USER=nonroot
 ENV UID=10001 
@@ -16,8 +16,8 @@ RUN adduser \
 RUN apt update && apt -y install wget gnupg binutils && \
     wget "https://nginx.org/keys/nginx_signing.key" && \
     apt-key add nginx_signing.key && \
-    echo "deb https://nginx.org/packages/mainline/debian/ bullseye nginx" >/etc/apt/sources.list.d/nginx.list && \
-    echo "deb-src https://nginx.org/packages/mainline/debian/ bullseye nginx" >>/etc/apt/sources.list.d/nginx.list && \
+    echo "deb https://nginx.org/packages/mainline/debian/ bookworm nginx" >/etc/apt/sources.list.d/nginx.list && \
+    echo "deb-src https://nginx.org/packages/mainline/debian/ bookworm nginx" >>/etc/apt/sources.list.d/nginx.list && \
     apt update && \
     apt install -y nginx && \
     apt install --download-only --reinstall nginx lsb-base  libgcc-s1 libc6 libcrypt1 libpcre2-8-0 libssl1.1 zlib1g && \
