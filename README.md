@@ -1,7 +1,7 @@
 # Distroless Nginx
 
 This is the distroless container of the Nginx. The binaries
-are the latest Debian 11 binaries from the Nginx.org repository.
+are the latest Debian 12 binaries from the Nginx.org repository.
 
 This follows the instructions at 
 [Google Container Tools Distroless](https://github.com/GoogleContainerTools/distroless)
